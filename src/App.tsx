@@ -5,6 +5,7 @@ import Store from "./pages/Store"
 import About from "./pages/About"
 import Navbar from "./components/Navbar"
 import { ShoppingCardProvider } from "./context/ShoppingCartContext"
+import TodoList from "./components/todo/TodoList"
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/store" element={<Store />} />
         <Route path="/about" element={<About />} />
+        <Route path="/todos" element={<TodoList />} />
       </Routes>
     </Container>
     </ShoppingCardProvider>

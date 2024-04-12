@@ -18,6 +18,9 @@ export default function Navbar() {
           <Nav.Link to="/about" as={NavLink}>
             About
           </Nav.Link>
+          <Nav.Link to="/todos" as={NavLink}>
+            Todos
+          </Nav.Link>
         </Nav>
         {cartQuantity > 0 && 
                 <Button
