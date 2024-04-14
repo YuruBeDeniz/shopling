@@ -1,5 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Form, InputGroup } from 'react-bootstrap';
 import { v4 as uuidv4 } from 'uuid';
 
 export type Todo = {
@@ -39,15 +39,15 @@ export default function AddTodo({ todos, setTodos, setError }: AddTodoProps) {
   };
 
   return (
-    <div>
-     <form onSubmit={addTodo}>
-         <input 
-             value={todo} 
-             onChange={handleChange} 
-             placeholder="Enter Todo"
-         />
-         <Button type="submit">Add</Button>
-     </form>
-    </div>
+    <Form onSubmit={addTodo} className="mb-3">
+      <InputGroup>
+        <Form.Control 
+          value={todo} 
+          onChange={handleChange} 
+          placeholder="Enter Todo"
+        />
+        <Button variant="primary" type="submit">Add</Button>
+      </InputGroup>
+    </Form>
   )
 }
